@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{102C369F-9DB8-4FBE-822F-F1B26440FCF9}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="webapi2/Models/Entity.cs">
+    <Files>
+      <File FileName="webapi2/Startup.cs" Line="44" Column="1" />
+      <File FileName="webapi2/Models/EntityContext.cs" Line="17" Column="1" />
+      <File FileName="webapi2/Controllers/EntitiesController.cs" Line="21" Column="67" />
+      <File FileName="webapi2/Models/Entity.cs" Line="15" Column="46" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="webapi2" expanded="True">
+            <Node name="webapi2" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Entity.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.webapi2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
