@@ -1,4 +1,5 @@
 working registry
+
 Wednesday 14 Feb 19h-21h30
 Task2 - Angular - Installation Heroes Template
 Task2 - Angular - Configuration routes,  new classes, modificaiton services ... %
@@ -9,5 +10,22 @@ Task2 - Angular - Modification of components - View List + Delete
 Task2 - Angular - Initial data
 
 
-To come:
-Task2 - Angular - Modification of components - View Edit/New
+Mercredi 21 Feb 13h-17h
+Task1 - Creation github
+      - Starting projet VisualStudio
+      - Creation WebApi + Controllers + Some calls postman...  
+
+Mercredi 21 Feb 20h-21h30
+Task2 - Angular - Modification of components
+     - adding ng5 to github
+     - adding validation   
+     - View Edit %
+     
+     
+
+
+ To come    
+     
+     View New 
+
+

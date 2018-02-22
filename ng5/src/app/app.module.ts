@@ -26,6 +26,8 @@ import { EntityDetailComponent }  from './entity-detail/entity-detail.component'
 import { EntityService }          from './entity.service';
 
 
+
+
 @NgModule({
   imports: [
     BrowserModule,

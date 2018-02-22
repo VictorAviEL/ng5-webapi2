@@ -1,70 +1,173 @@
 <div *ngIf="entity">
   <h2>{{ entity.name }} - Détails</h2>
 
+  <form class="needs-validation" name="myForm" #myForm="ngForm" novalidate >
 
-
-  <div class="card">
-    <div class="card-header">
-      Featured
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-
-
-
-  <div><span>id: </span>{{entity.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="entity.name" placeholder="name"/>
-    </label>
-  </div>
-  <button (click)="goBack()">Annuler</button>
-  <button (click)="save()">Sauvegarder</button>
-</div>
-
-
-
-
-
-
-<footer class="pt-4 my-md-5 pt-md-5 border-top">
+  
   <div class="row">
     <div class="col-12 col-md">
-      <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-      <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+        <div class="card">
+            <div class="card-header">
+              Informations générales
+            </div>
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-6 col-md">
+
+                        <div class="row">
+
+                            <div class="col-6 ">
+                                <label for="nom">Nom :*</label>
+                            </div>
+
+                            <div class="col-6 ">
+                                <input type="text" class="form-control" id="nom" name="name" placeholder="" [(ngModel)]="entity.name" required #uname="ngModel" >
+
+                                    <div *ngIf="uname.invalid" style="color:red;"> 
+                                        Le nom es requis. 
+                                    </div> 
+                        
+                           
+                          
+                            </div>
+
+                      </div>
+
+                      <div class="row">                      
+
+                            <div class="col-6 ">
+                                <label for="form">Forme d'entité :</label>
+                            </div>
+
+                            <div class="col-6 ">
+                                <input type="text" class="form-control" id="form" name="form" placeholder="" [(ngModel)]="entity.form" >
+                            </div>
+
+                      </div>    
+
+                      <div class="row">                      
+
+                          <div class="col-6 ">
+                              <label for="adresse">Adresse :</label>
+                          </div>
+
+                          <div class="col-6 ">
+                              <textarea  class="form-control"  id="adresse"  name="adresse" placeholder="" [(ngModel)]="entity.address" ></textarea>
+                          </div>
+
+                    </div>    
+
+                    </div>
+                    <div class="col-6 col-md">
+
+
+                        <div class="row">
+
+                            <div class="col-6 ">
+                                <label for="dissolue">Dissolue :</label>
+                            </div>
+
+                            <div class="col-6 ">
+                                <input type="checkbox"  id="dissolue" name="dissolue"  [(ngModel)]="entity.dissolue"  ng-checked="entity.dissolue">
+                        
+                           
+                          
+                            </div>
+
+                      </div>
+
+                      <div class="row">                      
+
+                            <div class="col-6 ">
+                                <label for="date_creation">Date de création :</label>
+                            </div>
+
+                            <div class="col-6 ">
+                                <input type="text" class="form-control" id="date_creation" name="date_creation" placeholder="" [(ngModel)]="entity.date_creation" >
+                            </div>
+
+                      </div>    
+
+                      <div class="row">                      
+
+                          <div class="col-6 ">
+                              <label for="date_fiscal">Date de fin d'année fisale :</label>
+                          </div>
+
+                          <div class="col-6 ">
+                              <input type="text" class="form-control" id="date_fiscal" name="date_fiscal" placeholder="" [(ngModel)]="entity.date_fiscal" >
+                          </div>
+
+                    </div>    
+
+
+                    <div class="row">                      
+
+                        <div class="col-6 ">
+                            <label for="adresse">Nature des activités :</label>
+                        </div>
+
+                        <div class="col-6 ">
+                            <textarea  class="form-control"  id="activities"  name="activities" placeholder="" [(ngModel)]="entity.activities" ></textarea>
+                        </div>
+
+                  </div>    
+
+
+
+
+
+                    </div>
+                </div>  
+
+
+            </div>
+          </div>
+    
+    
+    
     </div>
-    <div class="col-6 col-md">
-      <h5>Features</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Cool stuff</a></li>
-        <li><a class="text-muted" href="#">Random feature</a></li>
-        <li><a class="text-muted" href="#">Team feature</a></li>
-        <li><a class="text-muted" href="#">Stuff for developers</a></li>
-        <li><a class="text-muted" href="#">Another one</a></li>
-        <li><a class="text-muted" href="#">Last time</a></li>
-      </ul>
+  </div>  
+
+  <div class="row">
+    <div class="col-12 col-md">
+
+        <div class="col-6 ">
+            <div class="card">
+                <div class="card-header">
+                  Actionnaires
+                </div>
+                <div class="card-body">    
+                </div>
+           </div>             
+
+
+
+        </div>
+
+        <div class="col-6 ">
+            <div class="card">
+                <div class="card-header">
+                  Directeurs et officiers
+                </div>
+                <div class="card-body">    
+                </div>
+           </div>     
+
+
+           
+        </div>
+
+
     </div>
-    <div class="col-6 col-md">
-      <h5>Resources</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Resource</a></li>
-        <li><a class="text-muted" href="#">Resource name</a></li>
-        <li><a class="text-muted" href="#">Another resource</a></li>
-        <li><a class="text-muted" href="#">Final resource</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>About</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Team</a></li>
-        <li><a class="text-muted" href="#">Locations</a></li>
-        <li><a class="text-muted" href="#">Privacy</a></li>
-        <li><a class="text-muted" href="#">Terms</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
+  </div>       
+  
+  <div class="row">
+      <div class="col-12 col-md">
+          <button (click)="goBack()">Annuler</button>
+          <button (click)="save()" [hidden]="uname.invalid">Sauvegarder</button>
+      </div>
+    </div>    
+
+  </form>

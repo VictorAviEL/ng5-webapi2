@@ -10,7 +10,7 @@ export class InMemoryDataService implements InMemoryDbService {
               name: "Bonbon gummies jelly",
               form: "Sweeties",
               address: "America",
-              dissolue: true,
+              dissolue: false,
               date_creation: "2018-02-18",
               date_fiscal: "2019",
               activities: "Apple pie jujubes tootsie roll cookie",
