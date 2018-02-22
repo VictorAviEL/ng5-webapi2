@@ -1,0 +1,47 @@
+<h2 style="margin-top:40px;"> </h2>
+
+
+<!--
+<div>
+  <label>Entité nom :
+    <input #entityName />
+  </label>
+  <button (click)="add(entityName.value); entityName.value=''">
+    add
+  </button>
+</div>
+
+
+<ul class="entities">
+  <li *ngFor="let entity of entities">
+    <a routerLink="/detail/{{entity.id}}">
+      <span class="badge">{{entity.id}}</span> {{entity.name}}
+    </a>
+    <button class="delete" title="delete entity"
+    (click)="delete(entity)">x</button>
+  </li>
+</ul>
+
+
+-->
+
+
+  <div class="my-3 p-3 bg-white rounded box-shadow">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Entités légales   <a style="    font-size: 13px;      float: right;" routerLink="/nouvelle">Nouvelle</a></h6>
+   
+    
+    
+    <div class="media text-muted pt-3"  *ngFor="let entity of entities">
+      <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">  
+      <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <div class="d-flex justify-content-between align-items-left w-100">
+         <span>{{entity.id}} - <strong>{{entity.name}}</strong></span>
+        </div>
+            <a routerLink="/detail/{{entity.id}}">Éditer</a>
+            <a (click)="delete(entity)">Effacer</a>
+      </div>
+    </div>
+
+
+   
+  </div>

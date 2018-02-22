@@ -1,0 +1,13 @@
+working registry
+Wednesday 14 Feb 19h-21h30
+Task2 - Angular - Installation Heroes Template
+Task2 - Angular - Configuration routes,  new classes, modificaiton services ... %
+
+ 
+Sunday  18 Feb 20h-22h
+Task2 - Angular - Modification of components - View List + Delete
+Task2 - Angular - Initial data
+
+
+To come:
+Task2 - Angular - Modification of components - View Edit/New
