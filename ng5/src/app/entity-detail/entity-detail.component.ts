@@ -33,7 +33,9 @@ export class EntityDetailComponent implements OnInit {
       this.entityService.getEntity(id)
       .subscribe(entity => this.entity = entity);
 
-    }else this.entity = new Entity();
+    }else {
+      this.entity = new Entity(this.entityService.nextId);
+    }
 
     
   }

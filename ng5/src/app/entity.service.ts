@@ -21,6 +21,8 @@ const httpOptions = {
 export class EntityService {
 
   private entitiesUrl = 'api/entities';  // URL to web api
+  nextId = 0;
+
 
   constructor(
     private http: HttpClient/*,

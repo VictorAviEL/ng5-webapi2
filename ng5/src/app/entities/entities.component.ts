@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 
 import { Entity } from '../entity';
 import { EntityService } from '../entity.service';
@@ -8,18 +8,24 @@ import { EntityService } from '../entity.service';
   templateUrl: './entities.component.html',
   styleUrls: ['./entities.component.css']
 })
-export class EntitiesComponent implements OnInit {
+export class EntitiesComponent implements OnInit, OnChanges {
   entities: Entity[];
 
   constructor(private entityService: EntityService) { }
 
   ngOnInit() {
     this.getEntities();
+
+    
   }
+
+  ngOnChanges() {
+  }
+
 
   getEntities(): void {
     this.entityService.getEntities()
-    .subscribe(entities => this.entities = entities);
+    .subscribe(entities => {this.entities = entities; this.entityService.nextId = entities.length + 1;})
   }
 
   add(name: string): void {

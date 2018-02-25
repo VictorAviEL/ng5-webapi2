@@ -1,5 +1,5 @@
 <div *ngIf="entity">
-  <h2>{{ entity.name }} - Détails</h2>
+  <h2>Détails : {{ entity.name }}</h2>
 
   <form class="needs-validation" name="myForm" #myForm="ngForm" novalidate >
 
@@ -173,6 +173,9 @@
                     <div class="row">
 
                         <div class="col-10">
+                                <div *ngIf="entity.stockholders.length == 0" style="color:red;"> 
+                                        Un actionnaire es requis. 
+                                    </div> 
                         </div>   
                         <div class="col-2">
                                 <button class="btn btn-primary"  style="margin:0px;floar:right;" (click)="addStockholder()">+</button>
@@ -227,6 +230,9 @@
                         <div class="row">
     
                             <div class="col-10">
+                                    <div *ngIf="entity.directors.length == 0" style="color:red;"> 
+                                            Un directeur es requis. 
+                                        </div> 
                             </div>   
                             <div class="col-2">
                                     <button class="btn btn-primary"  style="margin:0px;" (click)="addDirector()">+</button>
@@ -252,7 +258,7 @@
   <div class="row">
       <div class="col-12 col-md">
           <button (click)="goBack()">Annuler</button>
-          <button (click)="save()" [hidden]="uname.invalid">Sauvegarder</button>
+          <button (click)="save()" [hidden]="uname.invalid || entity.directors.length == 0 || entity.stockholders.length == 0 ">Sauvegarder</button>
       </div>
     </div>    
 

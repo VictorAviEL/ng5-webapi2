@@ -14,8 +14,10 @@ export class Entity {
   directors: Array<Director>;
 
 
-   constructor(){
-
+   constructor(id:number){
+      this.id = id;
+      this.stockholders = [];
+      this.directors = [];
    }
 
 
