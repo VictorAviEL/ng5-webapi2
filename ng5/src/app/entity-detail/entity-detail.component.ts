@@ -2,9 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Entity }         from '../entity';
-import { Stockholder }         from '../stockholder';
-import { Director} from '../director';
+import { Entity }         from '../classes/entity';
+import { Stockholder }         from '../classes/stockholder';
+import { Director} from '../classes/director';
 import { EntityService }  from '../entity.service';
 
 @Component({
@@ -44,9 +44,21 @@ export class EntityDetailComponent implements OnInit {
     this.location.back();
   }
 
- save(): void {
+  saveIt(): void {
+
     this.entityService.updateEntity(this.entity)
-      .subscribe(() => this.goBack());
+      .subscribe(() =>this.goBack());
+
+  }
+
+ save(): void {
+  console.log("Soyez patient ! la sauvegarde devra prendre 3 secondes ! : )");
+  let timeoutId = setTimeout(() => {  
+    this.saveIt();
+  }, 3000);
+
+
+    
   }
 
 

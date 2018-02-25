@@ -21,11 +21,9 @@ Task2 - Angular - Modification of components
      - adding validation   
      - View Edit %
      
-     
-
-
- To come    
-     
-     View New 
-
+Dimanche 25Feb 13h-17h
+ - Edit View
+ - New View
+ - Mandatory Fields
+ - Service latency     
 

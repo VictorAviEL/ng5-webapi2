@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 
-import { Entity } from '../entity';
+import { Entity } from '../classes/entity';
 import { EntityService } from '../entity.service';
 
 @Component({

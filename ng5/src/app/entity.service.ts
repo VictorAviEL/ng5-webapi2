@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { Entity } from './entity';
+import { Entity } from './classes/entity';
 //import { MessageService } from './message.service';
 
 
@@ -21,7 +21,7 @@ const httpOptions = {
 export class EntityService {
 
   private entitiesUrl = 'api/entities';  // URL to web api
-  nextId = 0;
+  nextId = 4;
 
 
   constructor(
