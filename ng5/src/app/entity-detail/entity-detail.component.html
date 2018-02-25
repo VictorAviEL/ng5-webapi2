@@ -27,10 +27,15 @@
                                     <div *ngIf="uname.invalid" style="color:red;"> 
                                         Le nom es requis. 
                                     </div> 
-                        
-                           
-                          
                             </div>
+
+
+
+
+                   
+                       
+
+
 
                       </div>
 
@@ -130,8 +135,8 @@
     </div>
   </div>  
 
-  <div class="row">
-    <div class="col-12 col-md">
+  <div class="row" style="margin-top:20px;">
+  
 
         <div class="col-6 ">
             <div class="card">
@@ -139,6 +144,44 @@
                   Actionnaires
                 </div>
                 <div class="card-body">    
+
+                    <div  class="row">
+                            <div class="col-8">
+                                <p><strong>Nom</strong></p>
+                            </div> 
+                            
+                            <div class="col-4">
+                                <p><strong>%</strong></p>
+                            </div>
+                    </div>
+
+                    <div  class="row" style="    margin-bottom: 5px;"  *ngFor="let stockholder of entity.stockholders;let i = index">
+                            <div class="col-8">
+                                <input type="text" class="form-control"  name="stockholder_name[{{i}}]" placeholder="" [(ngModel)]="stockholder.name" >
+                                
+                            </div> 
+                            
+                            <div class="col-2">
+                                <input type="text" class="form-control"  name="stockholder_percent[{{i}}]" placeholder="" [(ngModel)]="stockholder.percent" >
+                            </div>
+
+                            <div class="col-2">
+                                    <button class="btn btn-danger" style="margin:0px;" (click)="delStockholder(i)">x</button>
+                            </div>
+                           
+                    </div>
+                    <div class="row">
+
+                        <div class="col-10">
+                        </div>   
+                        <div class="col-2">
+                                <button class="btn btn-primary"  style="margin:0px;floar:right;" (click)="addStockholder()">+</button>
+                        </div>   
+                    
+                    </div>    
+                    
+                
+
                 </div>
            </div>             
 
@@ -152,6 +195,50 @@
                   Directeurs et officiers
                 </div>
                 <div class="card-body">    
+
+
+
+                        <div  class="row">
+                                <div class="col-8">
+                                    <p><strong>Rôle</strong></p>
+                                </div> 
+                                
+                                <div class="col-4">
+                                    <p><strong>Nom</strong></p>
+                                </div>
+                        </div>
+    
+                        <div  class="row" style="    margin-bottom: 5px;"  *ngFor="let director of entity.directors;let i = index">
+                               
+                                <div class="col-5">
+                                        <input type="text" class="form-control"  name="director_role[{{i}}]" placeholder="" [(ngModel)]="director.role" >
+                                </div>
+                            
+                                <div class="col-5">
+                                    <input type="text" class="form-control"  name="director_name[{{i}}]" placeholder="" [(ngModel)]="director.name" >
+                                    
+                                </div> 
+ 
+                                <div class="col-2">
+                                        <button class="btn btn-danger" style="margin:0px;" (click)="delDirector(i)">x</button>
+                                </div>
+                               
+                        </div>
+                        <div class="row">
+    
+                            <div class="col-10">
+                            </div>   
+                            <div class="col-2">
+                                    <button class="btn btn-primary"  style="margin:0px;" (click)="addDirector()">+</button>
+                            </div>   
+                        
+                        </div>    
+                        
+                    
+    
+
+
+
                 </div>
            </div>     
 
@@ -160,7 +247,6 @@
         </div>
 
 
-    </div>
   </div>       
   
   <div class="row">

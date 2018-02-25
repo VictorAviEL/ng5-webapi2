@@ -14,4 +14,13 @@ export class Entity {
   directors: Array<Director>;
 
 
+   constructor(){
+
+   }
+
+
+
+
+
+
 }

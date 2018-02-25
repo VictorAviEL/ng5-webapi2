@@ -7,15 +7,15 @@ export class InMemoryDataService implements InMemoryDbService {
       
             {
               id: 1,
-              name: "Bonbon gummies jelly",
+              name: "Bonbon gummies jelly2",
               form: "Sweeties",
               address: "America",
               dissolue: false,
               date_creation: "2018-02-18",
               date_fiscal: "2019",
               activities: "Apple pie jujubes tootsie roll cookie",
-              stockholders: [{percent: 100, name: "Macaroon"}],
-              directors: [{role: "CEO",  name: "Pie"}]
+              stockholders: [{"id":1, "percent": 100, "name": "Macaroon"}, {"id":2, "percent": 80, "name": "Kitkat"}],
+              directors: [{"id":1,"role": "CEO",  "name": "Pie"}]
               },
 
               {
@@ -27,8 +27,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 date_creation: "2018-02-18",
                 date_fiscal: "2019",
                 activities: "Apple pie jujubes tootsie roll cookie",
-                stockholders: [{percent: 100, name: "Macaroon"}],
-                directors: [{role: "CEO",  name: "Pie"}]
+                stockholders: [{"id":1,"percent": 100, "name": "Macaroon"}],
+                directors: [{"id":1,"role": "CEO",  "name": "Pie"}]
                 },
 
                 {
@@ -40,12 +40,9 @@ export class InMemoryDataService implements InMemoryDbService {
                   date_creation: "2018-02-18",
                   date_fiscal: "2019",
                   activities: "Apple pie jujubes tootsie roll cookie",
-                  stockholders: [{percent: 100, name: "Macaroon"}],
-                  directors: [{role: "CEO",  name: "Pie"}]
+                  stockholders: [{"id":1,"percent": 100, "name": "Macaroon"}],
+                  directors: [{"id":1,"role": "CEO",  "name": "Pie"}]
                   }  
-
-
-
 
     ];
     return {entities};

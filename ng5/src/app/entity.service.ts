@@ -56,6 +56,7 @@ export class EntityService {
       tap(_ => this.log(`fetched entity id=${id}`)),
       catchError(this.handleError<Entity>(`getEntity id=${id}`))
     );
+   // console.log(this.entity);
   }
 
   /* GET entities whose name contains search term */
@@ -70,9 +71,14 @@ export class EntityService {
     );
   }
 
-  //////// Save methods //////////
+ 
 
-  /** POST: add a new entity to the server */
+
+
+
+
+
+ //////// Save methods //////////
   addEntity (entity: Entity): Observable<Entity> {
     return this.http.post<Entity>(this.entitiesUrl, entity, httpOptions).pipe(
       tap((entity: Entity) => this.log(`added entity w/ id=${entity.id}`)),

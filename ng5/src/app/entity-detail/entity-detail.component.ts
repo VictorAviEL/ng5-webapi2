@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Entity }         from '../entity';
+import { Stockholder }         from '../stockholder';
+import { Director} from '../director';
 import { EntityService }  from '../entity.service';
 
 @Component({
@@ -21,12 +23,19 @@ export class EntityDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getEntity();
+    
   }
 
   getEntity(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.entityService.getEntity(id)
+
+    if (id > 0){
+      this.entityService.getEntity(id)
       .subscribe(entity => this.entity = entity);
+
+    }else this.entity = new Entity();
+
+    
   }
 
   goBack(): void {
@@ -37,4 +46,30 @@ export class EntityDetailComponent implements OnInit {
     this.entityService.updateEntity(this.entity)
       .subscribe(() => this.goBack());
   }
+
+
+  addStockholder() {
+
+   this.entity.stockholders.push(new Stockholder((this.entity.stockholders.length+1)));
+  }
+
+
+  delStockholder(id: number) {
+    this.entity.stockholders.splice(id, 1);
+  }
+
+
+
+  addDirector() {
+
+    this.entity.directors.push(new Director((this.entity.directors.length+1)));
+   }
+ 
+ 
+   delDirector(id: number) {
+     this.entity.directors.splice(id, 1);
+   }
+ 
+
+
 }

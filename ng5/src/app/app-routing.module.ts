@@ -7,7 +7,7 @@ import {EntitiesComponent}      from './entities/entities.component';
 const routes: Routes = [
   { path: '', redirectTo: '/liste', pathMatch: 'full' },
   { path: 'detail/:id', component: EntityDetailComponent },
-  { path: 'nouvelle', component: EntitiesComponent },
+  { path: 'nouvelle', component: EntityDetailComponent },
   { path: 'liste', component: EntitiesComponent }
 ];
 
