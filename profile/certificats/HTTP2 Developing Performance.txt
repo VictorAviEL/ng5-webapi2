@@ -1,0 +1,96 @@
+HTTP/2: Developing for Performance
+-------------------------------------
+
+How to mesure performance
+----------------------------
+Google PageSpeed   https://developers.google.com/speed/pagespeed/insights/
+https://www.webpagetest.org/ ***WebPageTest Site bySite rendering of page... wich content at wich time...
+Pingdom  https://www.pingdom.com/
+GTMetrix https://gtmetrix.com/
+
+
+Web performance == page speed (how fast and effective the website is)
+
+Performance is very linked to:
+Best performance = Best experiences...
+-UX: User experience
+-Matters for conversions
+-Matters for cost
+-Findable : Website better iondexed in Search Giants
+
+Technical Performance
+Tecnics aspects
+
+Perceived Performance
+What the user needs to waits for start
+
+
+Optimization targets:
+-HTML: ollow web standards, use natiove behavior, minify and compress
+-CSS and JS : Follow standards, Stay dry, native cssm css transaction, serve critical css and js first
+-Concatenation and onlinning of CSS and Javascript into single files is no longer recommended (Too much time to see results...)
+-Images: appropiate format, optimized and compressed
+- Server TRansfer: Compressing files, critical loading sequence, caching, CDNs
+- Browser: Focus on above-the-fold critial rendering, Utilize server push for optimal caching, 
+
+*The page will not be rendered before all CSS is downloades and the CSSOM is complete.
+*The visitor will not get the full intereactive experience until all Javascript is loaded and rendered, which can only happen when both DOM and CSSOM are complete.
+
+TEchniques recommended:
+Inline critical files js, css, ...
+Call JS and the end, async
+
+HTTP2 by Google 76%+ worldwide support (requires SSL)
+
+
+Techinques:
+- Minify CSS and JS
+- Cache CSS and JS that is unlikely to cahngte
+- Server push to provide browser with required files before it knows it needs them
+
+
+
+
+
+Optimize images
+---------------------------------------
+Choice correct formats; (JPG2000)
+Optimize the iomages
+Deploy responsive images
+Use SVG whenever possible??? not sure!
+
+Are images necesary??? oO
+
+Manually optimization:
+Try to make a high Bokeh - It means not too many different colors. = More compacted colors choices.
+*srcset=""
+
+
+
+
+TEchnique Deferring Non-critical-CSS
+--------------------------------------
+Firstload critical CSS, after load secondary CSS
+
+
+Technique - Manage SVG images using GRUNT
+-------------------------------------------
+
+Technique - Minimization, unification, image optimization... using GULP
+---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
